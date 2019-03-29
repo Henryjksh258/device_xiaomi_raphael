@@ -24,6 +24,9 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
 on property:sys.boot_completed=1
     start vendor.msm_irqbalance
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 on property:init.svc.vendor.ipacm-diag=running
     stop vendor.ipacm-diag
 
