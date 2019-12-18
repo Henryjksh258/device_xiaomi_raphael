@@ -1,0 +1,7 @@
+[
+  {
+    "repository": "PixelExperience-Devices/vendor_MiuiCamera",
+    "target_path": "vendor/MiuiCamera",
+    "branch": "ten-anx-raphael"
+  }
+]
