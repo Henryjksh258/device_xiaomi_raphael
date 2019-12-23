@@ -119,6 +119,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
 
+#Property to enable scroll pre-obtain view
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.scroll.preobtain.enable=true
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
