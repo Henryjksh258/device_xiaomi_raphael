@@ -112,13 +112,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     com.gsma.services.nfc \
-    com.nxp.nfc.nq \
-    libnqnfc-nci \
-    nqnfcee_access.xml \
-    nqnfcse_access.xml \
-    NQNfcNci \
-    libnqnfc_nci_jni \
-    nfc_nci.nqx.default.hw \
+    NfcNci \
     SecureElement \
     Tag
 
@@ -136,10 +130,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/powerhint.xml
-
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
 
 # Ril
 PRODUCT_PACKAGES += \
