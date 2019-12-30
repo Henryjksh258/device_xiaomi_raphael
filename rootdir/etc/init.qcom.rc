@@ -22,3 +22,5 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
 on property:sys.boot_completed=1
     start vendor.msm_irqbalance
 
+on property:init.svc.vendor.ipacm-diag=running
+    stop vendor.ipacm-diag
