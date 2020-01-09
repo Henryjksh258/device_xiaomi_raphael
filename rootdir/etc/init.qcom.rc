@@ -48,6 +48,10 @@ service vendor.power-hal-1-2 /system/bin/true
 on property:sys.boot_completed=1
     start vendor.msm_irqbalance
 
+    # Enable idle state listener
+    write /sys/class/drm/card0/device/idle_encoder_mask 1
+    write /sys/class/drm/card0/device/idle_timeout_ms 100
+
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
