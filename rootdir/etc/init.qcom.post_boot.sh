@@ -4568,18 +4568,13 @@ case "$target" in
         echo 1 > /proc/sys/vm/watermark_scale_factor
 
 	# configure cpusets
-        echo 0-3 > /dev/cpuset/top-app/cpus
-        echo 1-2 > /dev/cpuset/audio-app/cpus
-        echo 0-3 > /dev/cpuset/foreground/cpus
-        echo 0-3 > /dev/cpuset/foreground/boost/cpus
-        echo 0-3 > /dev/cpuset/background/cpus
-        echo 0-3 > /dev/cpuset/system-background/cpus
-        echo 0-7 > /dev/cpuset/top-app/cpus
-        echo 0-7 > /dev/cpuset/foreground/cpus
-        echo 0-7 > /dev/cpuset/foreground/boost/cpus
-        echo 0-7 > /dev/cpuset/background/cpus
-        echo 0-7 > /dev/cpuset/system-background/cpus
-        echo 0-7 > /dev/cpuset/camera-daemon/cpus
+    echo 1-2 > /dev/cpuset/audio-app/cpus
+    echo 0-1 > /dev/cpuset/background/cpus
+    echo 0-7 > /dev/cpuset/camera-daemon/cpus
+    echo 0-3,5-6 > /dev/cpuset/foreground/cpus
+    echo 0-3 > /dev/cpuset/restricted/cpus
+    echo 0-3 > /dev/cpuset/system-background/cpus
+    echo 0-7 > /dev/cpuset/top-app/cpus
 
 	# Setup final blkio
 	# value for group_idle is us
