@@ -30,3 +30,4 @@ TARGET_SUPPORTS_GOOGLE_RECORDER := false
 
 # Inherit from custom vendor
 $(call inherit-product, vendor/MiuiCamera/config.mk)
+$(call inherit-product-if-exists, vendor/chaldea/common.mk)
