@@ -385,12 +385,21 @@
       "ResetOnInit": true
     },
     {
+      "Name": "SchedFeatures",
+      "Path": "/sys/kernel/debug/sched_features",
+      "Values": [
+        "NO_ENERGY_AWARE",
+        "ENERGY_AWARE"
+      ],
+      "ResetOnInit": true
+    },
+    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
         "CAMERA_STREAMING",
         "CAMERA_STREAMING_4K",
-        "CAMERA_STREAMING_60FPS",
+	"CAMERA_STREAMING_60FPS",
         "CAMERA_STREAMING_SECURE",
         "SUSTAINED_PERFORMANCE",
         ""
@@ -515,6 +524,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "SchedFeatures",
+      "Duration": 5000,
+      "Value": "NO_ENERGY_AWARE"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 5000,
       "Value": "2419200"
@@ -614,6 +629,12 @@
       "Node": "UfsHibern8Enable",
       "Duration": 5000,
       "Value": "0"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "SchedFeatures",
+      "Duration": 1000,
+      "Value": "NO_ENERGY_AWARE"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -896,6 +917,12 @@
       "Node": "CameraHalCpuset",
       "Duration": 0,
       "Value": "0-5"
+    },
+    {
+      "PowerHint": "CAMERA_SHOT",
+      "Node": "SchedFeatures",
+      "Duration": 1000,
+      "Value": "NO_ENERGY_AWARE"
     },
     {
       "PowerHint": "CAMERA_SHOT",
